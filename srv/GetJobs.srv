@@ -1,0 +1,5 @@
+# Empty
+---
+bool success
+string message
+sensopart_interfaces/Job[] jobs

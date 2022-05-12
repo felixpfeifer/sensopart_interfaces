@@ -1,0 +1,5 @@
+bool trigger true
+---
+sensor_msgs/Image image
+bool success
+string message

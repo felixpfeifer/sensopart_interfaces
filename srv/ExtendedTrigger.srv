@@ -1,0 +1,9 @@
+string data
+---
+string MODE_CONFIG='C'
+string MODE_RUN='R'
+
+bool success
+string message
+bool passed
+string mode

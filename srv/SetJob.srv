@@ -1,0 +1,4 @@
+int32 job
+---
+bool success
+string message
