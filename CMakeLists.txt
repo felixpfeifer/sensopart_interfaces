@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.8)
 project(sensopart_interfaces)
 
 # Default to C++14
@@ -14,6 +14,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 
 # declare the message files to generate code for
 set(msg_files
@@ -22,10 +23,13 @@ set(msg_files
 
 # declare the service files to generate code for
 set(srv_files
+  "srv/GetPose.srv"
+  "srv/Calibration.srv"
   "srv/ExtendedTrigger.srv"
   "srv/GetImage.srv"
   "srv/GetJobs.srv"
   "srv/SetJob.srv"
+  "srv/TriggerRobotics.srv"
 )
 
 # declare the action files to generate code for
@@ -37,7 +41,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
   ${srv_files}
 #  ${action_files}
-  DEPENDENCIES builtin_interfaces std_msgs sensor_msgs
+  DEPENDENCIES builtin_interfaces std_msgs sensor_msgs geometry_msgs
 )
 
 ament_export_dependencies(rosidl_default_runtime)

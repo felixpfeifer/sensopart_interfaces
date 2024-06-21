@@ -1,0 +1,8 @@
+bool init
+bool compute
+bool first # Only used for the first image 
+float64[] pose # X, Y, Z, Roll, Pitch, Yaw in mm and degrees
+
+---
+bool success
+int64 image_number

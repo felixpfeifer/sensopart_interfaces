@@ -1,0 +1,5 @@
+float32[] pose # robot pose in world frame format: [x, y, z, roll, pitch, yaw] in mm and degrees
+string trigerid # ID of the trigger that caused the service to be called
+---
+bool success # return true if the service succeeded
+string message # comments regarding success or failure
